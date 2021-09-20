@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('Inicio/{id}', function () {
+    return "Bienvenido a G-Expedientes";
+
+});
+
+Route::get('Expedientes/create', function () {
+    return "En esta sección podrá cargar un nuevo expediente";
+});
+
+Route::get('Expedientes/expte', function ($expte) {
+    return "Ud. esta consultando el expte: $expte";
+});
