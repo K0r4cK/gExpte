@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\expedienteController;
+use App\Http\Controllers\homeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,19 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', homeController::class);
 
-Route::get('Inicio/{id}', function () {
-    return "Bienvenido a G-Expedientes";
+Route::get('expedientes', [expedienteController::class, 'index']);
 
-});
+Route::get('expedientes/create', [expedienteController::class, 'create']);
 
-Route::get('Expedientes/create', function () {
-    return "En esta sección podrá cargar un nuevo expediente";
-});
+Route::get('expedientes/{expte}', [expedienteController::class, 'show']);
 
-Route::get('Expedientes/expte', function ($expte) {
-    return "Ud. esta consultando el expte: $expte";
-});
