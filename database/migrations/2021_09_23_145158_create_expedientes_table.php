@@ -16,10 +16,10 @@ class CreateExpedientesTable extends Migration
         Schema::create('expedientes', function (Blueprint $table) {
             $table->id();
             $table->integer('numexpte');
-            $table->integer('yearexpte', 4);            
+            $table->integer('yearexpte');
             $table->string('title');
-            $table->
-            $table->timestamp('ulmov')->nullable()->default(time());
+            $table->string('category');
+            $table->string('ulmov')->nullable;
             $table->boolean('cad');
             $table->date('date');
             $table->timestamps();

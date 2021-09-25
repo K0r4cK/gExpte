@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Expedientes;
 use Illuminate\Http\Request;
 
 class expedienteController extends Controller
 {
     public function index(){
-        return view ('expedientes.index');
+
+        $files = Expedientes::paginate();
+
+        return view ('expedientes.index', compact('files'));
     }
 
     public function create(){

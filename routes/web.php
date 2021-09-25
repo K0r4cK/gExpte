@@ -17,9 +17,9 @@ use App\Http\Controllers\homeController;
 
 Route::get('/', homeController::class);
 
-Route::get('expedientes', [expedienteController::class, 'index']);
+Route::get('expedientes', [expedienteController::class, 'index'])->name('expedientes.index');
 
-Route::get('expedientes/create', [expedienteController::class, 'create']);
+Route::get('expedientes/create', [expedienteController::class, 'create'])->name('expedientes.create');
 
-Route::get('expedientes/{expte}', [expedienteController::class, 'show']);
+Route::get('expedientes/{expte}', [expedienteController::class, 'show'])->name('expedientes.show');
 

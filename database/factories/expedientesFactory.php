@@ -22,7 +22,13 @@ class expedientesFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'numexpte'=>$this->faker->numberBetween($int1 = 100, $int2 =17999999),
+            'yearexpte'=>$this->faker->numberBetween($int1 = 1980, $int2 = 2021),
+            'title'=>$this->faker->sentence(),
+            'category'=>$this->faker->randomElement(['Organico', 'Contable', 'Elecciones Generales', 'Elecciones Paso', 'Junta Electoral Nacional']),
+            'ulmov'=> $this-> faker->paragraph(),
+            'cad'=> $this-> faker->boolean(),
+            'date'=> $this-> faker->date(),
         ];
     }
 }
