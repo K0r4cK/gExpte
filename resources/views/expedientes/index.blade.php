@@ -6,12 +6,14 @@
 
 @section('content')
     <h1>"Bienvenido a la sección Expedientes"</h1>
-    <a href="{{route('expedientes.create')}}">
-        <button>Nuevo Expediente</button>
-    </a>
+        <a href="{{route('expedientes.create')}}">
+            <button>Nuevo Expediente</button>
+        </a>
     <ul>
         @foreach ($files as $expte)
-            <li>{{$expte->title}}</li>
+            <li>
+                <a href="{{route('expedientes.show', $expte->id)}}">{{$expte->caratula, $expte->objeto}}
+            </li>
         @endforeach
     </ul>
 

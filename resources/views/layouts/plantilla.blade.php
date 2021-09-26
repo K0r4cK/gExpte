@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +14,6 @@
     @yield('content')
 
     <!--footer -->
-    <!-- script -->
+    <!--script-->
 </body>
 </html>

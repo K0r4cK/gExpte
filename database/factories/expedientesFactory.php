@@ -24,11 +24,11 @@ class expedientesFactory extends Factory
         return [
             'numexpte'=>$this->faker->numberBetween($int1 = 100, $int2 =17999999),
             'yearexpte'=>$this->faker->numberBetween($int1 = 1980, $int2 = 2021),
-            'title'=>$this->faker->sentence(),
+            'caratula'=>$this->faker->sentence(),
+            'objeto'=>$this->faker->randomElement(['Reconocimiento de Partido de Distrito', 'Elecciones PASO del fecha', 'Incidente', 'Delitos']),
             'category'=>$this->faker->randomElement(['Organico', 'Contable', 'Elecciones Generales', 'Elecciones Paso', 'Junta Electoral Nacional']),
-            'ulmov'=> $this-> faker->paragraph(),
+            'ulmov'=> $this-> faker->sentence(),
             'cad'=> $this-> faker->boolean(),
-            'date'=> $this-> faker->date(),
         ];
     }
 }

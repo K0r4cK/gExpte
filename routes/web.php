@@ -21,5 +21,7 @@ Route::get('expedientes', [expedienteController::class, 'index'])->name('expedie
 
 Route::get('expedientes/create', [expedienteController::class, 'create'])->name('expedientes.create');
 
-Route::get('expedientes/{expte}', [expedienteController::class, 'show'])->name('expedientes.show');
+Route::post('expedientes', [expedienteController::class, 'store'])->name('expedientes.store');
+
+Route::get('expedientes/{id}', [expedienteController::class, 'show'])->name('expedientes.show');
 

@@ -17,11 +17,11 @@ class CreateExpedientesTable extends Migration
             $table->id();
             $table->integer('numexpte');
             $table->integer('yearexpte');
-            $table->string('title');
+            $table->string('caratula');
+            $table->string('objeto');
             $table->string('category');
             $table->string('ulmov')->nullable;
-            $table->boolean('cad');
-            $table->date('date');
+            $table->string('cad');
             $table->timestamps();
         });
     }

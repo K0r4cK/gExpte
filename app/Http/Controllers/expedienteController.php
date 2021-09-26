@@ -15,10 +15,30 @@ class expedienteController extends Controller
     }
 
     public function create(){
+
         return view ('expedientes.create');
     }
 
-    public function show($expte){
+    public function store(Request $request){
+
+        $expte = new Expedientes();
+
+        $expte->numexpte = $request->numexpte;
+        $expte->yearexpte = $request->yearexpte;
+        $expte->caratula = $request->caratula;
+        $expte->objeto = $request->objeto;
+        $expte->category = $request->category;
+        $expte->ulmov = $request->ulmov;
+        $expte->cad = $request->cad;
+
+        $expte->save;
+    }
+
+    public function show($id){
+
+        $expte = Expedientes::find($id);
+
         return view ('expedientes.show', compact('expte'));
     }
 }
+
