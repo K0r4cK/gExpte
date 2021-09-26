@@ -21,7 +21,7 @@ class CreateExpedientesTable extends Migration
             $table->string('objeto');
             $table->string('category');
             $table->string('ulmov')->nullable;
-            $table->string('cad');
+            $table->string('cad')->nullable;
             $table->timestamps();
         });
     }

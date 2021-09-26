@@ -12,7 +12,7 @@
     <ul>
         @foreach ($files as $expte)
             <li>
-                <a href="{{route('expedientes.show', $expte->id)}}">{{$expte->caratula, $expte->objeto}}
+                <a href="{{route('expedientes.show', $expte->id)}}">{{$expte->caratula}} s/ {{$expte->objeto}}
             </li>
         @endforeach
     </ul>

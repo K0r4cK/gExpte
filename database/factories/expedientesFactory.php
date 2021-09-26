@@ -28,7 +28,7 @@ class expedientesFactory extends Factory
             'objeto'=>$this->faker->randomElement(['Reconocimiento de Partido de Distrito', 'Elecciones PASO del fecha', 'Incidente', 'Delitos']),
             'category'=>$this->faker->randomElement(['Organico', 'Contable', 'Elecciones Generales', 'Elecciones Paso', 'Junta Electoral Nacional']),
             'ulmov'=> $this-> faker->sentence(),
-            'cad'=> $this-> faker->boolean(),
+            'cad'=> $this-> faker->sentence(),
         ];
     }
 }

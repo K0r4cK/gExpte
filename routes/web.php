@@ -15,13 +15,19 @@ use App\Http\Controllers\homeController;
 |
 */
 
+//rutas login
 Route::get('/', homeController::class);
 
+//rutas CRUD expedientes
 Route::get('expedientes', [expedienteController::class, 'index'])->name('expedientes.index');
 
 Route::get('expedientes/create', [expedienteController::class, 'create'])->name('expedientes.create');
 
 Route::post('expedientes', [expedienteController::class, 'store'])->name('expedientes.store');
 
-Route::get('expedientes/{id}', [expedienteController::class, 'show'])->name('expedientes.show');
+Route::get('expedientes/{expte}', [expedienteController::class, 'show'])->name('expedientes.show');
+
+Route::get('expedientes/{expte}/edit}', [expedienteController::class, 'edit'])->name('expedientes.edit');
+
+Route::put('expedientes/{expte}', [expedienteController::class, 'update'])->name('expedientes.update');
 

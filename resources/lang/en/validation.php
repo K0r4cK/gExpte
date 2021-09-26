@@ -153,6 +153,14 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'numexpte' => 'Número de Expediente',
+        'yearexpte' => 'Año Expediente',
+        'caratula' => 'Caratula',
+        'objeto' => 'Objeto',
+        'category' => 'Categoría',
+        'ulmov' => 'Último Movimiento',
+        'cad' => 'Estado',
+    ],
 
 ];
