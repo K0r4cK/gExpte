@@ -61,6 +61,17 @@ class expedienteController extends Controller
 
     public function update(Request $request, Expedientes $expte){
 
+        $request->validate([
+            'numexpte' => 'required',
+            'yearexpte' => 'required',
+            'caratula' => 'required',
+            'objeto' => 'required',
+            'category' => 'required',
+            'ulmov' => 'required',
+            'cad' => 'required',
+
+        ]);
+
         $expte->numexpte = $request->numexpte;
         $expte->yearexpte = $request->yearexpte;
         $expte->caratula = $request->caratula;

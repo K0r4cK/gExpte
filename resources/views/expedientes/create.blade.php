@@ -13,7 +13,7 @@
 
     <label>
         <strong>Numero Expte.:</strong>
-        <input type="number" name="numexpte">
+        <input type="number" name="numexpte" value="{{old('numexpte')}}">
     </label>
 
     @error('numexpte')
@@ -24,7 +24,7 @@
 
     <label>
         <strong>Año Expte.:</strong>
-        <input type="number" name="yearexpte">
+        <input type="number" name="yearexpte" value="{{old('yearexpte')}}">
     </label>
 
     @error('yearexpte')
@@ -37,7 +37,7 @@
 <br>
     <label>
         <strong>Caratula:</strong>
-        <input type="text" style="width: 150px" name="caratula">
+        <input type="text" style="width: 150px" name="caratula" value="{{old('caratula')}}">
     </label>
 
     @error('caratula')
@@ -48,7 +48,7 @@
 
     <label>
         <strong>Objeto:</strong>
-        <input type="text" style="width: 250px" name="objeto">
+        <input type="text" style="width: 250px" name="objeto" value="{{old('objeto')}}">
     </label>
 
     @error('objeto')
@@ -61,7 +61,7 @@
 <br>
     <label>
         <strong>Categoría:</strong>
-        <input type="text" style="width: 100px" name="category">
+        <input type="text" style="width: 100px" name="category" value="{{old('category')}}">
     </label>
 
     @error('category')
@@ -72,7 +72,7 @@
 
     <label>
         <strong>Último Movimiento:</strong>
-        <input type="text" style="width: 350px" name="ulmov">
+        <input type="text" style="width: 350px" name="ulmov" value="{{old('ulmov')}}">
     </label>
 
     @error('ulmov')
